@@ -1,0 +1,61 @@
+
+<h3>Worksheet Result</h3>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Reference Number</th>
+            <th>Outlook</th>
+            <th>Undertand treatment goals</th>
+            <th>Quality of life accepctable</th>
+            <th>Understand Pros and Cons</th>
+            <th>Patient Preference</th>
+            <th>Patient Choice</th>
+            <th>Surrogate Feeling</th>
+            <th>Questions</th>
+            <th>Surrogate Choice</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="result in results | orderBy: '-timestamp'">
+            <td>{{result.timestamp | date:"MM/dd/yyyy @ h:mma"}}</td>
+            <td>{{result.id}}</td>
+            <td>{{result.outlook}}</td>
+            <td>{{result.goal}} </td>
+            <td>{{result.quality}} </td>
+            <td>{{result.pac}} </td>
+            <td>{{result.LoveOneWant}} </td>
+            <td>{{result.LoveOneChoice}} </td>
+            <td>{{result.feeling}}</td>
+            <td>{{result.question}}</td>
+            <td>{{result.value}}</td>
+            <!-- <td>
+                <span ng-if = "result.goal">Yes</span>
+                <span ng-if = "!result.goal">No</span>
+            </td>
+            <td>
+                <span ng-if = "result.quality">Yes</span>
+                <span ng-if = "!result.quality">No</span>
+            </td>
+            <td>
+                <span ng-if = "result.pac">Yes</span>
+                <span ng-if = "!result.pac">No</span>
+            </td>
+
+            <td>
+                <span ng-if = "result.LoveOneWant.wishcomfort">Patient Preference more comfort.</span>
+                <span ng-if = "result.LoveOneWant.wishsurvial">Patient Preference more survial.</span>
+              </br>
+                <span ng-if = "result.LoveOneWant.wishmentionedyes">Patient have mentioned this.</span>
+                <span ng-if = "result.LoveOneWant.wishmentionedno">Patient have not mentioned this.</span>
+              </br>
+                <span ng-if = "result.LoveOneWant.livingwillyes">Patient have living will</span>
+                <span ng-if = "result.LoveOneWant.livingwillno">Patient don't have living will. </span>
+            </td> -->
+
+
+        </tr>
+    </tbody>
+</table>
